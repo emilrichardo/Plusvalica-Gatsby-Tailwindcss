@@ -1,11 +1,6 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import HeadLine from './HeadLine';
-import icon1 from '../../assets/icons/habitacionales.jpg';
-import icon2 from '../../assets/icons/industriales.jpg';
-import icon3 from '../../assets/icons/comerciales.jpg';
-import icon4 from '../../assets/icons/hoteleros.jpg';
-import icon5 from '../../assets/icons/agroindustriales.jpg';
-import icon6 from '../../assets/icons/terrenos.jpg';
 const CategoriesProperties = () => {
     return ( <>
     <section>
@@ -14,27 +9,45 @@ const CategoriesProperties = () => {
             <p className="mb-8 leading-relaxed text-base md:text-2xl md:max-w-xl">Accede a un inventario de inversión con una gama de más de 5 categorías de propiedades internacionales.</p>
             <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center mt-20">
                 <div className="text-center">
-                    <img className="mx-auto w-3/4 mb-5" src={icon1} /> 
+                    <StaticImage 
+                    src="../../assets/icons/habitacionales.jpg"
+                    className="mx-auto w-3/4 mb-5"
+                    />                   
                     <h4 className="text-lg">Habitacionales</h4>
                 </div>   
                 <div className="text-center">
-                    <img className="mx-auto w-3/4 mb-5" src={icon2} /> 
+                    <StaticImage 
+                    src="../../assets/icons/industriales.jpg"
+                    className="mx-auto w-3/4 mb-5"
+                    />
                     <h4 className="text-lg">Industriales</h4>
                 </div>   
-                <div className="text-center">
-                    <img className="mx-auto w-3/4 mb-5" src={icon3} /> 
+                <div className="text-center">                    
+                    <StaticImage 
+                    src="../../assets/icons/comerciales.jpg"
+                    className="mx-auto w-3/4 mb-5"
+                    />
                     <h4 className="text-lg">Comerciales</h4>
                 </div>   
-                <div className="text-center">
-                    <img className="mx-auto w-3/4 mb-5" src={icon4} /> 
+                <div className="text-center">                   
+                    <StaticImage 
+                    src="../../assets/icons/hoteleros.jpg"
+                    className="mx-auto w-3/4 mb-5"
+                    />
                     <h4 className="text-lg">Hoteleros</h4>
                 </div>  
-                <div className="text-center">
-                    <img className="mx-auto w-3/4 mb-5" src={icon5} /> 
+                <div className="text-center">                    
+                    <StaticImage 
+                    src="../../assets/icons/agroindustriales.jpg"
+                    className="mx-auto w-3/4 mb-5"
+                    />
                     <h4 className="text-lg">Agro-industriales</h4>
                 </div>   
-                <div className="text-center">
-                    <img className="mx-auto w-3/4 mb-5" src={icon6} /> 
+                <div className="text-center">                    
+                    <StaticImage 
+                    src="../../assets/icons/terrenos.jpg"
+                    className="mx-auto w-3/4 mb-5"
+                    />
                     <h4 className="text-lg">Terrenos</h4>
                 </div>          
             

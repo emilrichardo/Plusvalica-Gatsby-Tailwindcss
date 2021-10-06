@@ -1,13 +1,18 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import HeadLine from './HeadLine';
-import investment from "../../assets/best-investment-apps.jpeg";
 const PlanNegocio = () => {
     return ( <>
      
-        <div className="container relative mt-24 mx-auto px-5 md:px-16 md:pr-0 py-24 md:py-24 md:pb-0 grid  md:grid-cols-2 gap-10 md:overflow-hidden">
+        <div id="plannegocio" className="container relative mt-24 mx-auto px-5 md:px-16 md:pr-0 py-24 md:py-24 md:pb-0 grid  md:grid-cols-2 gap-10 md:overflow-hidden">
             <div>
-                <HeadLine size="xl" className="uppercase">Plan de  Negocios</HeadLine>
-                <img className="investment rounded mb-5 md:opacity-20  md:absolute inset-x-0 top-0 md:w-full z-0" src={investment} />
+                <HeadLine size="xl" className="uppercase">Plan de  Negocio</HeadLine>
+                <StaticImage
+                src="../../assets/best-investment-apps.jpeg"
+                style={{position: "absolute"}}
+                className="investment rounded mb-5 md:opacity-20  md:absolute inset-x-0 top-0 md:w-full z-0" 
+                 />
+                
             </div>
             
             <div className="caption md:bg-dark100 md:flex flex-col md:py-24 md:px-32 items-center md:z-10">

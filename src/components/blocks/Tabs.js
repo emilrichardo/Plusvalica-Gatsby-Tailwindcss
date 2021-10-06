@@ -1,8 +1,7 @@
 import React,  { useState }  from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import TabButton from './TabButton';
 import HeadLine from './HeadLine';
-import joven from "../../assets/joven.jpg"
-import bonoprod from "../../assets/bono-productividad.jpg";
 const Tabs = () => {
     const [toggleState, setToggleState] = useState(1);
     const toggleTab = (index) => {
@@ -19,11 +18,27 @@ const Tabs = () => {
 
     return ( <>
 
+
+   
     
 
      <div className="container mx-auto px-5 md:px-16 py-10 md:py-34 relative md:min-h-screen">
+
+        {toggleState === 3  ? 
+          <StaticImage src="../../assets/bono-productividad.jpg" 
+          className=" hidden md:block absolute w-1/2 right-24 top-40 max-h-full  transition-all  " 
+          imgClassName="hidden md:block"
+
+          style={{position: "absolute"}}
+        />
+        :
+        <StaticImage src="../../assets/joven.jpg" 
+          className=" hidden md:block absolute w-1/2 right-0 top-0 object-cover object-center max-h-full  opacity-50 filter grayscale transition-all " 
+          imgClassName="hidden md:block"
+
+          style={{position: "absolute"}}/>
+        }
       
-         <img alt="Bonos" className={toggleState === 3 ? " hidden md:block absolute w-1/2 right-24 top-40 max-h-full  transition-all " : " hidden md:block absolute w-1/2 right-0 top-0 object-cover object-center max-h-full  opacity-50 filter grayscale transition-all "}  src={toggleState === 3 ? bonoprod: joven  }   />
        <h4 className="text-4xl mb-5 md:hidden">Bonos</h4>  
       <div className="block-tabs grid grid-cols-1 md:grid-cols-4  gap-4">
          <TabButton             
@@ -72,7 +87,11 @@ const Tabs = () => {
                 <p className="md:text-2xl mt-4">Este bono se genera diariamiente sobre un sistema binario que te paga sobre el BV empatado.</p>
                 <small className="opacity-80 mt-10 block">* Este bono se calcula a las 00:00 (GMT-4) Hora de Nueva York y se refleja diariamente.</small>
 
-                <img className="md:hidden"  src={bonoprod}   alt="Bonos" />
+              
+                <StaticImage
+                src="../../assets/bono-productividad.jpg"
+                alt="bonos productividad"
+                 />
                 <div className="rounded bg-dark100 py-5 px-10 mt-5">
                  <h4 className="text-primary font-bold uppercase">Ejemplo de BONO DE PRODUCTIVIDAD</h4>
                    <h5>Volumen empatado:</h5> 

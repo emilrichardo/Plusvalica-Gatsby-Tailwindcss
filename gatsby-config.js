@@ -7,6 +7,13 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-plugin-scroll-reveal`,
+    
+  
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
@@ -20,6 +27,17 @@ module.exports = {
         develop: false,
         tailwind:true,
       },
-    }
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
+      },
+    },
+    
+    
+
   ],
 }
