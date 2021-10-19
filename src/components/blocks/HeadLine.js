@@ -16,10 +16,8 @@ const HeadLine = ({children, size, level, className}) => {
             ${className} 
             ${sizes[size] || sizes.default}
              font-normal title-font tracking-wide
-            `} >
-            
-            {children}
-        
+            `} >            
+            {children}        
         </h2>
     
         </> );

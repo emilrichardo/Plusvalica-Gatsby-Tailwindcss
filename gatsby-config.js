@@ -4,7 +4,13 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-module.exports = {
+ module.exports = {
+  siteMetadata: {
+    title: `Plusvalica`,
+    description: `An example to learn how to source data from WordPress.`,
+    author: `@gatsbyjs`,
+  },
+  
   /* Your site config here */
   plugins: [
     `gatsby-plugin-smoothscroll`,
@@ -12,6 +18,19 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-scroll-reveal`,
+       // highlight-start
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        /*
+         * The full URL of the WordPress site's GraphQL API.
+         * Example : 'https://www.example-site.com/graphql'
+         */
+        url: `https://admin.emil.ar/graphql`,
+      },
+    },
+    // highlight-end
+    /**/
     
   
     {
@@ -36,6 +55,7 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
+    
     
     
 

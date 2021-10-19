@@ -9,10 +9,10 @@ const variants ={
     default:'text-dark bg-primary hover:bg-primary-dark',
     primary:'text-dark bg-gradient-to-r from-primary-dark via-primary to-primary-light  hover:from-primary',
 }
-const Button = ({href,children, className , size, variant}) => {
+const Button = ({to,children, className , size, variant}) => {
     return ( 
     <Link 
-    to={href} 
+    to={to} 
     className={`
     ${className}
     ${sizes[size] || sizes.default}
