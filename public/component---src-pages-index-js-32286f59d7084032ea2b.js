@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[678],{7704:function(e,t,r){r.r(t),r.d(t,{default:function(){return l}});var n=r(7294);function l(){return n.createElement(n.Fragment,null)}}}]);
+//# sourceMappingURL=component---src-pages-index-js-32286f59d7084032ea2b.js.map
